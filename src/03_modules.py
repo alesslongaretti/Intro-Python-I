@@ -1,3 +1,5 @@
+import platform
+import sys
 import os
 os.system("clear")
 
@@ -8,8 +10,6 @@ methods, and the os module, which gives you access to lower-
 level operating system functionality.
 """
 
-import sys
-import platform
 # See docs for the sys module: https://docs.python.org/3.7/library/sys.html
 
 # Print out the command line arguments in sys.argv, one per line:
@@ -29,7 +29,6 @@ print(sys.platform)
 print(platform.python_version())
 
 
-import os
 # See the docs for the OS module: https://docs.python.org/3.7/library/os.html
 
 # Print the current process ID
@@ -46,5 +45,3 @@ print(os.getcwd())
 # YOUR CODE HERE
 
 print(os.getlogin())
-
-

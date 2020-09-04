@@ -1,5 +1,7 @@
+import pprint
 import os
 os.system("clear")
+pp = pprint.PrettyPrinter(indent=4).pprint
 
 """
 Dictionaries are Python's implementation of associative arrays.
@@ -39,6 +41,12 @@ waypoints = [
 # Add a new waypoint to the list
 # YOUR CODE HERE
 
+waypoints.append({"lat": 44,
+                  "lon": -124,
+                  "name": "a fourth place"})
+
+pp(waypoints)
+
 # Modify the dictionary with name "a place" such that its longitude
 # value is -130 and change its name to "not a real place"
 # Note: It's okay to access the dictionary using bracket notation on the
@@ -46,5 +54,15 @@ waypoints = [
 
 # YOUR CODE HERE
 
+waypoints[0]["lon"] = -130
+waypoints[0]["name"] = "not a real place"
+
+pp(waypoints)
+
+
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+
+for i in waypoints:
+    for value in i:
+        pp(i[value])
