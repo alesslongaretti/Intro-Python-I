@@ -47,4 +47,4 @@ y = [ i for i in x if int(i) % 2 ==0 ]
 #     if i % 2: 
 #         y.append(x[i]) 
 
-print(y)
+print(y) 
