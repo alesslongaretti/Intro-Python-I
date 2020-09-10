@@ -1,3 +1,6 @@
+import os
+os.system("clear")
+
 """
 The Python standard library's 'calendar' module allows you to
 render a calendar to your terminal.
@@ -27,6 +30,24 @@ print out a calendar for April in 2015, but if you omit either the year or both 
 it should use today’s date to get the month and year.
 """
 
+
+
 import sys
 import calendar
 from datetime import datetime
+
+month = datetime.today().month
+year = datetime.today().year
+
+
+if len(sys.argv) == 1:
+  print(calendar.month(year, month))
+elif len(sys.argv) == 2:
+  print(calendar.month(year, int(sys.argv[1])))
+elif len(sys.argv) == 3:
+  print(calendar.month(int(sys.argv[2]), int(sys.argv[1])))
+else:
+  print("The format for this input is 'python3 14_cal.py MM [YYYY]' ")
+
+
+
